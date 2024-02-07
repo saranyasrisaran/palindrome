@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fdconverter.css">
+    <title>CheckPalindrome</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Check Palindrome Or Not</h2>
+        <div class="inputdiv">
+            <input type="text" id="input">
+        </div>
+        <div>
+            <button type="submit" onclick="isPalindrome()"> Check </button>
+        </div>
+        <div id="result">
+
+        </div>
+
+    </div>
+    <script>
+        function isPalindrome() {
+            let str=document.getElementById("input").value
+         
+    let rev = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        rev += str[i];
+    }
+    if (rev == str) {
+        document.getElementById("result").innerHTML = "Palindrome";
+    } else {
+        document.getElementById("result").innerHTML = "Not palindrome"
+    }
+
+ 
+}
+  
+ </script>
+       
+</body>
+</html>
